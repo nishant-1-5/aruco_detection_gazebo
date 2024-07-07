@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="aruco_detection" type="detector.py" name="aruco_detection" output="screen"/>
+</launch>
