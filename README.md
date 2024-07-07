@@ -31,7 +31,7 @@ Assuming you already have ROS and gazebo ready to go (if not, refer TurtleBot3 E
 ```
   <include>
   <uri>model://marker_0</uri>
-  <pose>0 0 10 3.14 0 3.14</pose>
+  <pose>10 0 2 3.14 0 3.14</pose>
   </include>
 ```
   
