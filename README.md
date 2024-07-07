@@ -25,11 +25,14 @@ Assuming you already have ROS and gazebo ready to go (if not, refer TurtleBot3 E
    catkin_make
    source devel/setup.bash
    ```
-5. Edit the world file to spawn aruco markers or run the following commands at run time, in the demo video I have used turtlebot3_empty_world.
+5. Edit the world file to spawn aruco markers , in the demo video I have used turtlebot3_empty_world, and launch gazebo.
    ```
-   rosrun gazebo_ros spawn_model -file `rospack find gazebo_aruco_models`/models/marker_0/model.sdf -sdf -model aruco_marker_0 -x 10 -y 0 -z 2 -R 3.14 -P 0 -Y 3.14
-   rosrun gazebo_ros spawn_model -file `rospack find gazebo_aruco_models`/models/marker_1/model.sdf -sdf -model aruco_marker_1 -x 10 -y 0 -z 2 -R 3.14 -P 0 -Y 3.14
+  <include>
+  <uri>model://marker_0</uri>
+  <pose>0 0 10 3.14 0 3.14</pose>
+  </include>
    ```
+  
  6. Now run the detection node in another terminal.
   ```
   roslaunch aruco_detection aruco_detection.launch
